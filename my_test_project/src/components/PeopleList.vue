@@ -1,8 +1,8 @@
 <template>
   <h1>People List</h1>
-  <PeopleListItem name="Monica" :age="34" hairColor="brown"/>
-  <PeopleListItem name="Carlos" :age="45" hairColor="blue"/>
-  <PeopleListItem name="Yenny" :age="23" hairColor="yellow"/>
+  <PeopleListItem :person="person1" />
+  <PeopleListItem :person="person2" />
+  <PeopleListItem :person="person3" />
 
 </template>
 <script>
@@ -11,7 +11,14 @@ export default{
   name: 'PeopleList',
   components: {
     PeopleListItem,
-
-  }
+  },
+  data(){
+      return{
+        person1: {name: 'Monica', age: 34, hairColor: 'brown' },
+        person2: {name:'Carlos', age: 45, hairColor: 'blue'},
+        person3: {name: 'Yenny', age: 23, hairColor: 'Yellow'}
+      }
+    }
+  
 }
 </script>
