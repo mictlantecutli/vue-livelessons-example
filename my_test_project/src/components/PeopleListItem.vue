@@ -9,12 +9,7 @@
 <script>
 export default{
   name:'PeopleListItem',
-  data(){
-    return{
-      name: 'Moisés',
-      age: 40,
-      hairColor: 'black',
-    }
-  }
+  props: ['name', 'age', 'hairColor'],
+  
 }
 </script>
