@@ -1,4 +1,5 @@
 <template>
+  <CounterButton />
   
   <PeopleList />
 </template>
@@ -6,10 +7,13 @@
 <script>
 
 import PeopleList from './components/PeopleList.vue';
+import CounterButton from './components/CounterButton.vue';
+
 export default {
   name: 'App',
   components: {
     PeopleList,
+    CounterButton,
 
   }
 }
