@@ -14,6 +14,16 @@ export default {
   components: {
     PeopleList,
     CounterButton,
+    data(){
+      return{
+        numberOfClicks: 0,
+      }
+    },
+    methods:{
+      increment(){
+        this.numberOfClicks += 1
+      }
+    }
 
   }
 }
