@@ -1,5 +1,6 @@
 <template>
-  <CounterButton />
+  <Congratulations_user :numberOfClicks="numberOfClicks" />
+  <CounterButton @increment="increment" :numberOfClicks="numberOfClicks" />
   
   <PeopleList />
 </template>
@@ -9,22 +10,26 @@
 import PeopleList from './components/PeopleList.vue';
 import CounterButton from './components/CounterButton.vue';
 
+import Congratulations_user from './components/Congratulations.vue';
+
 export default {
   name: 'App',
   components: {
     PeopleList,
     CounterButton,
-    data(){
-      return{
-        numberOfClicks: 0,
-      }
-    },
-    methods:{
-      increment(){
-        this.numberOfClicks += 1
-      }
+    Congratulations_user,
+    
+},
+  data(){
+    return{
+      numberOfClicks: 0,
     }
 
+  },
+  methods:{
+    increment(){
+      this.numberOfClicks += 1
+    }
   }
 }
 </script>

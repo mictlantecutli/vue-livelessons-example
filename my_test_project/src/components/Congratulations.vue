@@ -1,10 +1,12 @@
 <template>
-  <h1>Congratulation! You've reached 10 clicks</h1>
+  <h1 v-if="numberOfClicks >= 10">Congratulations! You`ve reached 10 clicks</h1>
+
 </template>
 
 <script>
-export default{
-  name: 'Congratulations'
+  export default{
+    name: 'Congratulations_user',
+    props: ['numberOfClicks'],
+  }
 
-}
 </script>
