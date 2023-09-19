@@ -1,4 +1,5 @@
 <template>
+  <LifecycleTest v-if="numberOfClicks < 10" :numberOfClicks="numberOfClicks" />
   <Congratulations_user :numberOfClicks="numberOfClicks" />
   <CounterButton @increment="increment" :numberOfClicks="numberOfClicks" />
   
@@ -11,6 +12,7 @@ import PeopleList from './components/PeopleList.vue';
 import CounterButton from './components/CounterButton.vue';
 
 import Congratulations_user from './components/Congratulations.vue';
+import LifecycleTest from './components/LifecycleTest.vue';
 
 export default {
   name: 'App',
@@ -18,6 +20,7 @@ export default {
     PeopleList,
     CounterButton,
     Congratulations_user,
+    LifecycleTest,
     
 },
   data(){
