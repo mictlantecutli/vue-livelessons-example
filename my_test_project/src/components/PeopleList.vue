@@ -1,8 +1,7 @@
 <template>
   <h1>People List</h1>
-  <PeopleListItem :person="person1" />
-  <PeopleListItem :person="person2" />
-  <PeopleListItem :person="person3" />
+  <PeopleListItem v-for="person in people" :key="person.name" :person="person"/>
+
 
 </template>
 <script>
@@ -14,9 +13,12 @@ export default{
   },
   data(){
       return{
-        person1: {name: 'Monica', age: 34, hairColor: 'brown' },
-        person2: {name:'Carlos', age: 45, hairColor: 'blue'},
-        person3: {name: 'Yenny', age: 23, hairColor: 'Yellow'}
+        people: [
+          {name: 'Monica', age: 34, hairColor: 'brown' },
+          {name:'Carlos', age: 45, hairColor: 'blue'},
+          {name: 'Yenny', age: 23, hairColor: 'Yellow'}
+      
+        ],
       }
     }
   
