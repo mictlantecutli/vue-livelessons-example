@@ -1,4 +1,5 @@
 <template>
+  
   <h1>People List</h1>
   <PeopleListItem v-for="person in people" :key="person.name" :person="person"/>
 
@@ -24,3 +25,9 @@ export default{
   
 }
 </script>
+<style scoped>
+  h1{
+    color:red;
+  }
+
+</style>
