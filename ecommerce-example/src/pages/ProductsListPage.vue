@@ -5,18 +5,22 @@
       <h3>{{ product.name }}</h3>
     </router-link>
     <p>{{ product.price }}</p>
-    <button>Add to Cart</button>
+    <button @click="addToCart(product.id)">Add to Cart</button>
   </div>
 
 </template>
 <script>
-import products from './products';
+
   export default{
     name:'ProductsListPage',
-    data(){
-      return{
-        products,
-      }
+    props:['products'],
+    emits: ['addToCart'],
+    methods: {
+      addToCart(id){
+        this.$emit('addToCart', id);
+
+      },
     }
+    
   }
 </script>
