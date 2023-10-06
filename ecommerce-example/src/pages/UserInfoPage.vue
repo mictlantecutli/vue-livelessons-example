@@ -20,11 +20,13 @@
 <script>
   export default{
     name: 'UserInfoPage',
+    props:['userInfo'],
+    emits:['userInfoSaved'],
     data(){
       return{
-        name:'',
-        age:0,
-        address:'',
+        name:this.userInfo.name,
+        age:this.userInfo.age,
+        address:this.userInfo.address,
         shouldShowValidationErrors: false,
 
       }
@@ -32,7 +34,11 @@
     methods: {
       displayData(){
         this.shouldShowValidationErrors = true;
-        alert(`name is ${this.name}, age is ${this.age}, address is ${this.address}`)
+        
+        if(this.validationErrors.length===0){
+          this.$emit('userInfoSaved', this.name, this.age, this.address);
+          alert('Successfully saved data!!');
+        }
 
       }
     },
