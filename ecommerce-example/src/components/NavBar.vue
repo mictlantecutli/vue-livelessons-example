@@ -9,6 +9,9 @@
     <li>
       <router-link to="/user-info">Edit My Info</router-link>
     </li>
+    <li>
+      <router-link to="/employee">See the Employee of the Month</router-link>
+    </li>
     
   </ul>
 </template>
