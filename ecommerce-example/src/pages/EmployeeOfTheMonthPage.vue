@@ -1,5 +1,5 @@
 <template>
-  <h1>Employee Of The Month</h1>
+  <h1 v-flash="1000">Employee Of The Month</h1>
   <div v-if="personData">
     <h3>{{ personData.name.last }} {{ personData.name.first }}</h3>
   </div>
